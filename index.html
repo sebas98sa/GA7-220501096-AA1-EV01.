@@ -1,33 +1,207 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+    .container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 3rem;
+      background-color: rgba(255, 255, 255, 0.04);
+      border-radius: 1rem;
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.2), 0 10px 15px -7px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+    .container:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 16px 35px -12px rgba(0, 0, 0, 0.25), 0 12px 20px -8px rgba(0, 0, 0, 0.15);
+    }
 
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+    h1,
+    h2 {
+      color: #e0f7fa;
+      margin-bottom: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      background-image: linear-gradient(to right, #6ee7b7, #3b82f6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    h2 {
+      font-size: 2.75rem;
+      color: #a7f3d0;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #d1d5db;
+      margin-bottom: 2rem;
+      line-height: 1.9;
+      font-weight: 400;
+      opacity: 0.95;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    ul li {
+      font-size: 1.3rem;
+      color: #e2e8f0;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 1.5rem;
+    }
+
+    .evidencia-conocimiento a {
+      background-color: #8b5cf6;
+      color: #f8fafc;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 0.75rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      margin-top: 0;
+      box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.15), 0 3px 7px -3px rgba(0, 0, 0, 0.1);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .evidencia-conocimiento a:hover {
+      background-color: #a855f7;
+      transform: translateY(-4px) scale(1.08);
+      box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 8px -4px rgba(0, 0, 0, 0.15);
+    }
+
+    .evidencia-conocimiento a:active {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .icon {
+      font-family: 'FontAwesome';
+      font-size: 1.5rem;
+      color: #f5f5f5;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+
+      ul {
+        margin-left: 1rem;
+      }
+
+      .landing-header h1 {
+        font-size: 3.5rem;
+      }
+
+      .landing-header p {
+        font-size: 1.2rem;
+      }
+
+      .evidencia-conocimiento a {
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+      }
+
+      .evidencia-conocimiento li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .evidencia-conocimiento a {
+        margin-top: 1rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+<div class="container">
+  <header class="landing-header">
+    <h1>Informe técnico de plan de trabajo para construcción de software De
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+      sebastian sanchez ortiz</h1>
+    <p>GA7-220501096-AA1-EV01</p>
+  </header>
 
+  <section class="evidencia-conocimiento">
+    <h2>Evidencia de conocimiento</h2>
+    <ul>
+      <li>
+        Diferencia con claridad versionamientos locales y remotos.
+        <a href="control-versiones-local-remoto.html">
+          <i class="fas fa-book"></i> Ver Información
+        </a>
+      </li>
+      <li>
+        Selecciona y describe herramientas de desarrollo a utilizar para la codificación del software.
+        <a href="herramientas-desarrollo.html">
+          <i class="fas fa-code"></i> Ver Herramientas
+        </a>
+      </li>
+      <li>
+        Selecciona y describe herramientas de versionamiento.
+        <a href="herramientas-versionamiento.html">
+          <i class="fas fa-code-branch"></i> Ver Versionamiento
+        </a>
+      </li>
+    </ul>
+  </section>
+</div>
 </body>
 
 </html>
